@@ -1,0 +1,362 @@
+:root{
+    --backgroundSection : #2453A7;
+    --colorDj : #874CCC;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Poppins',sans-serif;
+    font-size: 18px;
+
+    height: 100vw;
+    overflow: hidden;
+}
+
+header {
+    background-color: var(--backgroundSection);
+    border-bottom: 1px solid white;
+    display: grid;
+    align-items: center;
+    padding: 10px;
+}
+
+header > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+
+}
+
+header > nav > h2{
+    font-family: "La Belle Aurore", cursive;
+    font-weight: 600;
+    color: white;
+    font-size: 1.5em;
+}
+
+header > nav > .menuPage > a{
+    margin-right: 80px;
+}
+
+.menuPage > a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+/* hamburger */
+
+.hamburgerMenu{
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(83, 82, 82, 0.7);
+}
+
+.hamburgerMenu > .menuPage{
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    display: none;
+}
+
+.hamburgerMenu > .menuPage > a:not(:first-child){
+    margin-top: 20px;
+}
+
+.hamburgerMenu > .menuPage > a{
+    font-size: clamp(10px,1.3em,1.8em);
+    border-bottom: 1px solid white;
+}
+
+input[id="hamburgerMenu"]{
+    display: none;
+}
+
+input[id="hamburgerMenu"]:checked + .menuPage{
+    display: none;
+}
+
+/* hamburger */
+
+/* tooogle hamburger */
+
+.toggle-open{
+    width: 50px;
+    height: 4px;
+    background-color: white;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+    display: none;
+}
+
+.toggle-open::after{
+    bottom: -10px;
+}
+
+.toggle-open::before{
+    top: -10px;
+}
+
+
+.toggle-open::after,
+.toggle-open::before{
+    content: '';
+    width: 50px;
+    height: 100%;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.toggle-close{
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.toggle-hamburger{
+    color: white;
+    font-size: clamp(1.5rem,2.5rem,4rem);
+}
+/* tooogle hamburger */
+
+/*  Arrow Up */
+
+.arrow-up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: hsl(0, 0%, 90%);
+}
+
+/*  */
+section {
+    background-color: var(--backgroundSection);
+}
+/* section hero */
+
+.hero{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 85vh;
+}
+
+.sideLeft{
+    color: white;
+    position: relative;
+    z-index: 2;
+    margin-left: 80px;
+    scale: 1.23;
+}
+
+.sideLeft >:nth-child(4){
+   margin: 15px 0;
+}
+
+.sideLeft > :nth-child(1){
+    font-size: clamp(1.5em, 1.7em,2em);
+}
+
+.sideLeft > :nth-child(3){
+    font-size: clamp(16.6px,17px,18px);
+    max-width: 400px ;
+}
+
+.sideLeft > :nth-child(5) {
+    display: flex;
+    gap: 10px;
+}
+
+
+.sideLeft > :nth-child(5) > button{
+   width: min(160px,180px);
+   height: 40px;
+   /* padding: 10px; */
+   border-radius: 10px;
+   border:none;
+   background-color: transparent ;
+   box-shadow: 0 0 4px white;
+}
+
+.sideLeft > :nth-child(5) > button:not(:first-child){
+    border: 1px solid white;
+    box-shadow: none;
+}
+
+.sideLeft > :nth-child(5) > button > a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.sideLeft > img[src="./img/Social Media Image Portfolio/Arrow Right.png"]{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 10px;
+    z-index: -1;
+}
+
+
+.socialMedia{
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.socialMedia > img{
+   height: 25px;
+   object-fit: cover;
+}
+
+.sideRight {
+    position: relative;
+    width: 50%;
+}
+
+
+.ellipse{
+    --sizeBall : 300px;
+    position: absolute;
+    right: 20px;
+    bottom: -150px;
+    width:var(--sizeBall);
+    height: var(--sizeBall);
+    background-color: var(--colorDj);
+    border-radius: 50%;
+    /* opacity: .6; */
+    filter: drop-shadow(0 0 30px #7C00DB);
+    box-shadow:0 0 30px #7C00DB ;
+    
+    /* rotateGemoyBallDj 1s linear  infinite forwards */
+}
+
+.sideRight > .ellipseDj::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--colorDj);
+    opacity: .8;
+    filter: drop-shadow(0 0 30px #7C00DB);
+    box-shadow:0 0 30px #7C00DB ;
+}
+
+.sideRight > .ellipseDj{
+    animation: gemoyBallDj 250ms linear  infinite forwards alternate , rotateGemoyBallDj 4s linear  infinite forwards;
+}
+
+.gelombang{
+    width: 100px;
+    height: 200px;
+    
+    border-radius: 50%;
+    border-radius: 20px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 80%;
+
+    transform: rotateZ(-40deg);
+    
+    background-color: var(--colorDj);
+    opacity: .6;
+    filter: drop-shadow(0 0 30px #7C00DB);
+    box-shadow:0 0 30px #7C00DB ;
+    position: absolute;
+    z-index: -1;
+}
+
+.gelombang:nth-child(1){
+    top: -40px;
+    left: 0;
+}
+
+.gelombang:nth-child(2){
+    right: 0;
+    top: -40px;
+    transform: rotateZ(30deg);
+}
+.gelombang:nth-child(3){
+    bottom: -80px;
+    left: -20px;
+    transform: rotateZ(-130deg);
+}
+.gelombang:nth-child(4){
+    bottom: -80px;
+    right: -20px;
+    transform: rotateZ(130deg);
+}
+
+@keyframes gemoyBallDj{
+    from{
+        scale: .7;
+    }
+    to{
+        scale: 1;
+    }
+}
+@keyframes rotateGemoyBallDj{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+
+/*  */
+
+
+
+
+/* break Media Query */
+@media (max-width:800px){
+    
+    header > nav > .menuPage{
+        display: none;
+    }
+
+    .hero > .sideLeft > :last-child{
+        opacity: 0;
+    }
+
+    .sideRight > .ellipseDj{
+        /* left: 50%; */
+        transform: translateX(-5%);
+        animation: gemoyBallDj 250ms linear  infinite forwards alternate;
+    }
+
+    .toggle-open{
+        display:block;
+    }
+    input[id="hamburgerMenu"]:not(:checked) + .menuPage{
+        display: grid;
+    }
+    .sideLeft{
+        scale: 1;
+        margin-left: 10px;
+    }
+}
