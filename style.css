@@ -238,6 +238,7 @@ section {
 
 
 .ellipse{
+    display: none;
     --sizeBall : 300px;
     position: absolute;
     right: 20px;
@@ -333,21 +334,34 @@ section {
 
 
 /* break Media Query */
+
+@media (min-width : 1200px){
+    .sideRight > .ellipseDj{
+        display: block;
+    }
+}
+
 @media (max-width:800px){
     
     header > nav > .menuPage{
         display: none;
     }
 
-    .hero > .sideLeft > :last-child{
-        opacity: 0;
+    .hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .sideRight > .ellipseDj{
-        /* left: 50%; */
-        transform: translateX(-5%);
-        animation: gemoyBallDj 250ms linear  infinite forwards alternate;
+    .hero > .sideLeft{
+        
     }
+
+    .hero > .sideLeft > :last-child{
+        opacity: 1;
+    }
+
+
 
     .toggle-open{
         display:block;
