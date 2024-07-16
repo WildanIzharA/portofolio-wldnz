@@ -18,7 +18,8 @@ body{
     font-size: 18px;
 
     height: 100vw;
-    overflow: hidden;
+    /* overflow: hidden; */
+    min-width: 380px;
 }
 
 header {
@@ -90,6 +91,70 @@ input[id="hamburgerMenu"]:checked + .menuPage{
 
 /* hamburger */
 
+/* serpihan kaca */
+
+.serpihanKaca{
+    width: 100%;
+    position: absolute;
+}
+
+.kaca{
+    width: 25px;
+    height: 15px;
+    background-color: white;
+    opacity: .3;
+    border-top-left-radius: 20% 30%;
+    border-bottom-left-radius: 10% 90%;
+    border-top-right-radius: 20% 50%;
+    border-bottom-right-radius: 20% 80%;
+    position: absolute;
+    animation: hujanKaca 10s linear  infinite, rotateGemoyBallDj 8s linear  infinite forwards;
+    top: 1vh;
+}
+
+
+.kaca:first-child{
+    left: 30vw;
+    animation-delay: 200ms;
+}
+.kaca:nth-child(2){
+    left: 50vw;
+    animation-delay: 800ms;
+}
+.kaca:nth-child(3){
+    left: 60vw;
+    animation-delay: 100ms;
+}
+.kaca:nth-child(4){
+    left: 14vw;
+    animation-delay: 400ms;
+}
+.kaca:nth-child(4){
+    left: 80vw;
+}
+.kaca:nth-child(5){
+    left: 20vw;
+    animation-delay: .3s;
+}
+.kaca:nth-child(6){
+    left: 5vw;
+    animation-delay: .7s;
+}
+
+
+@keyframes hujanKaca{
+    from{
+        top: 0vh;
+    }
+    to{
+        top: 100vh;
+    }
+}
+
+
+
+/*  */
+
 /* tooogle hamburger */
 
 .toggle-open{
@@ -156,6 +221,7 @@ section {
 /* section hero */
 
 .hero{
+    min-width: 300px;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -354,7 +420,7 @@ section {
     }
 
     .hero > .sideLeft{
-        
+
     }
 
     .hero > .sideLeft > :last-child{
@@ -374,3 +440,4 @@ section {
         margin-left: 10px;
     }
 }
+
