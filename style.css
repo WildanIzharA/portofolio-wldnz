@@ -227,6 +227,7 @@ input[id="hamburgerMenu"]:checked + .menuPage{
     height: 50px;
     border-radius: 100%;
     background-color: hsl(0, 0%, 90%);
+    z-index: 99;
 }
 
 /*  */
@@ -589,13 +590,13 @@ section {
 
 /* latest Project */
 
-.project{
+.latest-project{
     color: white;
     font-size: 12px;
     padding: 20px;
 }
 
-.project > h2{
+.latest-project > h2{
     margin:  30px 0;
     font-size: 30px;
 }
@@ -605,40 +606,123 @@ section {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    gap: 20px;
 }
 
 .card {
     border-radius: 10px;
+    min-width: 300px;
     width: 300px;
     padding: 5px;
-    background-color: white;
-    color: black;
+    /* background-color: white; */
+    color: white;
     text-align: center;
 }
 
+.card > h2{
+    margin-top: 20px;
+}
 
 .card > img{
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    /* border-top-right-radius: 10px;
+    border-top-left-radius: 10px; */
     width: 80%;
+    height: 200px;
+    object-fit: cover;
+
+    border-radius: 15px;
+    box-shadow:  0 0 5px white;
 }
 
 .card  > p {
-    margin : 10px 0;
-    font-size: 10px;
+    margin : 20px 0;
+    font-size: clamp(12px,13px,14px);
 }
 
 .card > button{
     width: 200px;
+    height: 35px;
     padding: 8px;
     border-radius: 20px;
     background-color: var(--backgroundSection);
     color: white;
     border: none;
+    box-shadow: 0 0 5px white;
+    cursor: pointer;
+}
+
+.card > button:hover{
+    box-shadow:  0 0 5px 2px var(--colorDj);
 }
 
 /*  */
 
+/* gallery project section */
+
+.gallery-project {
+    position: relative;
+    padding-top: 20px;
+}
+
+.gallery-project > h2{
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
+.gallery-project > :nth-child(3){
+    width: 100%;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+}
+
+main{
+    padding: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+main > .wrapper-card{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 5px;
+    /* background-color: red; */
+    overflow: hidden;
+    overflow-x: scroll;
+ }
+
+main > .wrapper-card::-webkit-scrollbar{
+    width: 0;
+}
+main > div:nth-child(2),
+main > div:nth-child(3){
+    display: none;
+}
+main > div > a >  img{
+    box-shadow: 0 0 5px white;
+}
+
+main > .latest > a >  img{
+   width: 60%;
+   border-radius: 5px;
+}
+
+main > .second{
+   width: 100%;
+}
+
+main > .second > a >  img{
+    margin-top: 10px;
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: fill;
+}
 /*  */
 
 /* keyframes */
@@ -678,6 +762,25 @@ section {
     .sideRight > .ellipseDj{
         display: block;
     }
+
+
+    main > .wrapper-card{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        gap: 5px;
+        height: 300px;
+        overflow: hidden;
+        overflow-y: scroll;
+        float: left;
+     }
+     main > div:nth-child(2),
+     main > div:nth-child(3){
+        display: block;
+    }
+    .gallery-project > :nth-child(3){
+        display: none;
+    }
 }
 
 @media (max-width:800px){
@@ -712,5 +815,10 @@ section {
         scale: 1;
         margin-left: 10px;
     }
+
+    main > .wrapper-card{
+        width: 90%;
+        float: none;
+     }
 }
 
