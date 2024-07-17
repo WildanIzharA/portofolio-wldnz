@@ -17,31 +17,38 @@ body{
     font-family: 'Poppins',sans-serif;
     font-size: 18px;
 
-    height: 100vw;
+    /* height: 100vh; */
     /* overflow: hidden; */
     min-width: 380px;
+    background-color: blue;
 }
 
 header {
+    z-index: 2;
     background-color: var(--backgroundSection);
     border-bottom: 1px solid white;
     display: grid;
     align-items: center;
-    padding: 10px;
+    padding:10px;
 }
 
 header > nav {
     display: flex;
     justify-content: space-between;
     align-items: center;    
-
+    /* position: relative; */
 }
 
 header > nav > h2{
     font-family: "La Belle Aurore", cursive;
-    font-weight: 600;
+    font-weight: normal;
+    font-style:italic;
+    letter-spacing: 1px;
     color: white;
     font-size: 1.5em;
+    /* position: absolute;
+    left: 0;
+    top: -5px; */
 }
 
 header > nav > .menuPage > a{
@@ -98,19 +105,26 @@ input[id="hamburgerMenu"]:checked + .menuPage{
     position: absolute;
 }
 
+
 .kaca{
-    width: 25px;
-    height: 15px;
+    --lebarKaca : 20px;
+    width: var(--lebarKaca);
+    height: var(--lebarKaca);
     background-color: white;
     opacity: .3;
-    border-top-left-radius: 20% 30%;
-    border-bottom-left-radius: 10% 90%;
-    border-top-right-radius: 20% 50%;
-    border-bottom-right-radius: 20% 80%;
+    border-radius: 100%;
     position: absolute;
     animation: hujanKaca 10s linear  infinite, rotateGemoyBallDj 8s linear  infinite forwards;
-    top: 1vh;
+    top: -20vh;
 }
+
+.serpihanKaca2 > .kaca{
+   animation-duration: 15s;
+}
+.serpihanKaca3 > .kaca{
+   animation-duration: 30s;
+}
+
 
 
 .kaca:first-child{
@@ -144,12 +158,13 @@ input[id="hamburgerMenu"]:checked + .menuPage{
 
 @keyframes hujanKaca{
     from{
-        top: 0vh;
+        top: -20vh;
     }
     to{
-        top: 100vh;
+        top: 100vmax;
     }
 }
+
 
 
 
@@ -263,6 +278,7 @@ section {
    border:none;
    background-color: transparent ;
    box-shadow: 0 0 4px white;
+   cursor: pointer;
 }
 
 .sideLeft > :nth-child(5) > button:not(:first-child){
@@ -276,7 +292,7 @@ section {
     font-size: 20px;
 }
 
-.sideLeft > img[src="./img/Social Media Image Portfolio/Arrow Right.png"]{
+.sideLeft img[src="./img/Social Media Image Portfolio/Arrow Right.png"]{
     position: absolute;
     height: 100%;
     top: 0;
@@ -292,8 +308,13 @@ section {
     align-items: center;
 }
 
-.socialMedia > img{
-   height: 25px;
+.socialMedia img{
+   height: 5vh;
+   object-fit: cover;
+}
+
+.socialMedia img[src="./img/Social Media Image Portfolio/LinkedIn.png"]{
+   height: 8vh;
    object-fit: cover;
 }
 
@@ -396,7 +417,259 @@ section {
 
 /*  */
 
+/* About-me Section */
 
+.about-me{
+    color: white;
+    box-sizing: border-box;
+    z-index: 2;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.bar{
+    background-color: #132d5a;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.bar:first-child{
+    top: 0;
+}
+.bar:nth-child(2){
+   bottom: 0;
+}
+
+
+.about-me > main{
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.about-me > main > h2{
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.about-me > main,
+.about-me > main > .profile{
+    display: grid;
+    place-items: center;
+}
+.about-me > main > .profile{
+    gap: 10px;
+    position: relative;
+}
+
+.about-me > main > .profile > .profile-img{
+   background-image: url(./img/profile/wildan.png);
+   width: 200px;
+   height: 200px;
+   border-bottom-left-radius: 100%;
+   border-bottom-right-radius: 80%;
+   background-position: center;
+   background-size: cover;
+
+    filter:drop-shadow(2px 3px 5px #b458d0);
+    /* box-shadow:  ; */
+
+   position: relative;
+   right: 10px;
+}
+
+.about-me > main > .profile > :last-child{
+    max-width: 400px;
+    padding: 20px;
+    font-size: clamp(12px,14px,16px);
+    text-align: center;
+}
+
+.about-me > main > .socialMedia{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.about-me > main > :last-child{
+    padding: 10px;
+}
+
+
+.about-me > .sudut > img[src="./img/Social Media Image Portfolio/Arrow Right.png"]{
+   height: 140px;
+   z-index: -1;
+    
+}
+
+
+.about-me > .sudut > img:nth-child(1){
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    transform: rotateZ(45deg);
+}
+.about-me > .sudut > img:nth-child(2){
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    transform: rotateZ(135deg);
+}
+.about-me > .sudut > img:nth-child(3){
+    position: absolute;
+    bottom: -10px;
+    left: -30px;
+    transform: rotateZ(-45deg);
+}
+.about-me > .sudut > img:nth-child(4){
+    position: absolute;
+    bottom: -10px;
+    right: -30px;
+    transform: rotateZ(-135deg);
+}
+
+.triangle-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    bottom: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.triangle{
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    top: -200%;
+
+    background-color: white;
+    opacity: .1;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 42%);
+
+    animation: TriangleGoDown 15s infinite , TriangleScale 4s infinite alternate-reverse,TriangleRotateZ 3s infinite normal linear;
+
+}
+
+
+.triangle:nth-child(1){
+    left: 2px;
+    animation-delay: 200ms;
+}
+.triangle:nth-child(2){
+    left: 20vw;
+    animation-delay: 1.3s;
+}
+.triangle:nth-child(3){
+    left: 40vw;
+    animation-delay: 3s;
+
+}
+.triangle:nth-child(4){
+    left: 50vw ;
+    animation-delay: 2s;
+
+}
+.triangle:nth-child(5){
+    left: 70vw ;
+    animation-delay: 2.4s;
+
+}
+
+/*  */
+
+/* Section Project */
+
+/* latest Project */
+
+.project{
+    color: white;
+    font-size: 12px;
+    padding: 20px;
+}
+
+.project > h2{
+    margin:  30px 0;
+    font-size: 30px;
+}
+
+.wrapper-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    border-radius: 10px;
+    width: 300px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+
+
+.card > img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 80%;
+}
+
+.card  > p {
+    margin : 10px 0;
+    font-size: 10px;
+}
+
+.card > button{
+    width: 200px;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: var(--backgroundSection);
+    color: white;
+    border: none;
+}
+
+/*  */
+
+/*  */
+
+/* keyframes */
+
+
+@keyframes TriangleGoDown {
+    from{
+        top: -30%;
+    }
+    to{
+        top: 100%;
+    }
+}
+
+@keyframes TriangleScale{
+    from{
+        scale: 1.1;
+    }
+    to{
+        scale: .9;
+    }
+}
+
+@keyframes TriangleRotateZ{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
 
 
 /* break Media Query */
@@ -419,9 +692,9 @@ section {
         align-items: center;
     }
 
-    .hero > .sideLeft{
+    /* .hero > .sideLeft{
 
-    }
+    } */
 
     .hero > .sideLeft > :last-child{
         opacity: 1;
