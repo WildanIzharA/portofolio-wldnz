@@ -228,6 +228,16 @@ input[id="hamburgerMenu"]:checked + .menuPage{
     border-radius: 100%;
     background-color: hsl(0, 0%, 90%);
     z-index: 99;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.arrow-up::after{
+    content: '^';
+    font-size: 20px;
 }
 
 /*  */
