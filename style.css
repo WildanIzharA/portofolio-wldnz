@@ -680,6 +680,9 @@ section {
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
+    /* display: grid;
+    justify-items: center;
+    align-items: center; */
 }
 
 .gallery-project > h2{
@@ -698,15 +701,17 @@ section {
     bottom: 5px;
 }
 
-main{
+
+
+.gallery-project-inside{
     padding: 20px;
     padding-bottom: 30px;
     text-align: center;
 }
 
 main > .wrapper-card{
-    min-width: 300px;
-    width: 300px;
+    /* min-width: 300px;
+    width: 300px; */
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
