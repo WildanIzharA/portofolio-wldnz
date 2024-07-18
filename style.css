@@ -320,12 +320,12 @@ section {
 }
 
 .socialMedia img{
-   height: 5vh;
+   height: 30px;
    object-fit: cover;
 }
 
 .socialMedia img[src="./img/Social Media Image Portfolio/LinkedIn.png"]{
-   height: 8vh;
+   height: 50px;
    object-fit: cover;
 }
 
@@ -661,6 +661,11 @@ section {
     cursor: pointer;
 }
 
+.card > button > a{
+    color: white;
+    text-decoration: none;
+}
+
 .card > button:hover{
     box-shadow:  0 0 5px 2px var(--colorDj);
 }
@@ -713,7 +718,7 @@ main > div:nth-child(2),
 main > div:nth-child(3){
     display: none;
 }
-main > div > a >  img{
+.gallery-project-inside > div > a >  img{
     box-shadow: 0 0 5px white;
 }
 
@@ -731,7 +736,7 @@ main > .second > a >  img{
   width: 100%;
   height: 200px;
   border-radius: 5px;
-  object-fit: fill;
+  object-fit: cover;
 }
 /*  */
 
