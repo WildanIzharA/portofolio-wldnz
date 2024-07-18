@@ -86,11 +86,10 @@ mainGalleryProject.innerHTML =
         <div class="wrapper-card">
         ${projectWildan.map((value) => {
             return `
-            <a href="${value.demoUrl}" class="card">
-            <img src="${value.imagePath}">
-            </a>
+            <a href="${value.demoUrl}" class="card"><img src="${value.imagePath}"></a>
             `
-        })}
+        }).join('')
+        }
         </div>
     <!--  -->
 
@@ -102,8 +101,7 @@ mainGalleryProject.innerHTML =
                 return `
                     <a href="${obj.demoUrl}"><img src="${obj.imagePath}"></a>
                 `
-            })
-        }
+            }).join('')}
      </div>
         
     <div class="second">
@@ -112,7 +110,7 @@ mainGalleryProject.innerHTML =
                     return `
                         <a href="${obj.demoUrl}"><img src="${obj.imagePath}"></a>
                     `
-                })
+                }).join('')
             }
     </div>
 

@@ -20,7 +20,7 @@ body{
     /* height: 100vh; */
     /* overflow: hidden; */
     min-width: 380px;
-    background-color: blue;
+    background-color: white;
 }
 
 header {
@@ -68,7 +68,8 @@ header > nav > .menuPage > a{
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(83, 82, 82, 0.7);
+    background-color: rgba(124, 0, 219,50%);
+
 }
 
 .hamburgerMenu > .menuPage{
@@ -385,6 +386,7 @@ section {
     box-shadow:0 0 30px #7C00DB ;
     position: absolute;
     z-index: -1;
+    filter: blur(5px);
 }
 
 .gelombang:nth-child(1){
@@ -677,6 +679,7 @@ section {
 .gallery-project {
     position: relative;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .gallery-project > h2{
@@ -702,6 +705,8 @@ main{
 }
 
 main > .wrapper-card{
+    min-width: 300px;
+    width: 300px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -709,7 +714,9 @@ main > .wrapper-card{
     /* background-color: red; */
     overflow: hidden;
     overflow-x: scroll;
- }
+}
+
+
 
 main > .wrapper-card::-webkit-scrollbar{
     width: 0;
@@ -780,6 +787,7 @@ main > .second > a >  img{
 
 
     main > .wrapper-card{
+        
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-evenly;
