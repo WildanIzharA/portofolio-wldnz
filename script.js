@@ -47,7 +47,7 @@ const projectWildan = [
         namaApplication : 'TicTacToe',
         bodyCopy : 'Sebuah Game TicTacToe bisa multiplayer / versus bot',
         imagePath : './img/project/tictactoe.png',
-        demoUrl : 'https://todoku.vercel.app'
+        demoUrl : 'https://tictactoe-eight-lemon.vercel.app'
     },
     {
         namaApplication : 'Calculator Besar',
