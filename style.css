@@ -12,6 +12,10 @@ html{
     padding: 0;
 }
 
+div::-webkit-scrollbar{
+    display: none;
+}
+
 
 body{
     font-family: 'Poppins',sans-serif;
@@ -478,7 +482,8 @@ section {
 }
 
 .about-me > main > .profile > .profile-img{
-   background-image: url(./img/profile/wildan.png);
+   background-image: url(./img/profile/wildan2.png);
+   transform: rotateY(180deg);
    width: 200px;
    height: 200px;
    border-bottom-left-radius: 100%;
@@ -627,6 +632,7 @@ section {
     width: 300px;
     padding: 5px;
     /* background-color: white; */
+    /* justify-content: space-between; */
     color: white;
     text-align: center;
 }
@@ -730,7 +736,8 @@ main > div:nth-child(2),
 main > div:nth-child(3){
     display: none;
 }
-.gallery-project-inside > div > a >  img{
+
+/* .gallery-project-inside > div > a >  img{
     box-shadow: 0 0 5px white;
 }
 
@@ -749,7 +756,7 @@ main > .second > a >  img{
   height: 200px;
   border-radius: 5px;
   object-fit: cover;
-}
+} */
 /*  */
 
 /* keyframes */
@@ -803,15 +810,17 @@ main > .second > a >  img{
         float: left;
      }
      main > div:nth-child(2),
-     main > div:nth-child(3){
-        display: block;
-    }
+     .gallery-project :last-child{
+        display: flex;
+     }
     .gallery-project > :nth-child(3){
         display: none;
     }
+
+   
 }
 
-@media (max-width:800px){
+@media (max-width:1200px){
     
     header > nav > .menuPage{
         display: none;
@@ -822,6 +831,7 @@ main > .second > a >  img{
         justify-content: center;
         align-items: center;
     }
+
 
     /* .hero > .sideLeft{
 
@@ -848,5 +858,14 @@ main > .second > a >  img{
         width: 90%;
         float: none;
      }
+
+    .scroll-horizontal{
+        display: flex;
+        flex-direction: row !important;
+        max-width: 95%;
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+
 }
 

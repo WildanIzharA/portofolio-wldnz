@@ -6,6 +6,7 @@
     <title>Wildan Izhar A.</title>
     <link rel="shortcut icon" href="./img/profile/kingfrog.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/output.css">
 
 
     <!-- font style -->
@@ -25,8 +26,9 @@
             <div class="menuPage">
                 <a href="#hero">Home</a>
                 <a href="#about-me">About Me</a>
+                <a href="#achievement">Achievement</a>
                 <a href="#project">Project</a>
-                <a href="#about-me">Contact</a>
+                <!-- <a href="#about-me">Contact</a> -->
             </div>
         </nav>
     </header>
@@ -40,8 +42,8 @@
             <label for="hamburgerMenu" class="toggle-hamburger toggle-close">&times;</label>
             <a href="#hero">Home</a>
             <a href="#about-me">About Me</a>
+            <a href="#achievement">Achievement</a>
             <a href="#project">Project</a>
-            <a href="#about-me">Contact</a>
         </div>
     </div>
 
@@ -115,7 +117,7 @@
             <h2>Hello <span style="color: yellow;">There</span>, </h2>
             <p>My <b>Name</b> is</p>
             <p><b>Wildan</b>, Saya adalah seorang pelajar dari Smk Bina Informatika Bintaro.
-                ini adalah portofolio saya, dan disinya menjelaskan tentang saya,project-project saya..
+                ini adalah portofolio saya, kumpulan project-project saya yang bisa dicoba..
             </p>
             <div class="socialMedia">
                 <!-- <a href="#"><img src="./img/Social Media Image Portfolio/WhastApp.png"></a> -->
@@ -162,15 +164,22 @@
                 <h4>Wildan Izhar Al haqq</h4>
                 <p>Halo Semuanya, Nama saya Wildan Izhar Al haqq <br> Saya adalah seorang yang berstatus pelajar di Smk Bina Informatika Bintaro, Saya saat ini sedang mengembangkan skill dibagian frotend dan tujuan saya setelah itu ke backend dan menjadi Fullstack developer.</p>
             </div>
+            <!-- current Skill ini harusnya -->
+            <p>Using Technology </p>
             <div class="socialMedia">
                 <!-- <a href="#"><img src="./img/Social Media Image Portfolio/WhastApp.png"></a> -->
-                <a href="https://www.instagram.com/starfours_/"><img src="./img/Social Media Image Portfolio/Instragam.png"></a>
-                <!-- <a href="wildanofficial32@gmail.com"><img src="./img/Social Media Image Portfolio/Email.png"></a> -->
-                <a href="https://github.com/wldnz"><img src="./img/Social Media Image Portfolio/Github.png"></a>
-                <a href="https://www.linkedin.com/in/wildan-izhar-al-haqq-640550319/"><img src="./img/Social Media Image Portfolio/LinkedIn.png"></a>
+                <a><img src="./img/tech/html5.png"></a>
+                <a><img class="scale-125" src="./img/tech/css3.png"></a>
+                <a><img src="./img/tech/javascript.png"></a>
+                <a><img src="./img/tech/php.png"></a>
+                <!-- <aldanofficial32@gmail.com"><img src="./img/tech/Email.png"></a> -->
+                <a><img src="./img/tech/node_js.png"></a>
+                <!-- <a><img src="./img/tech/laravel.png"></a> -->
+                <a><img src="./img/tech/tailwind.png"></a>
             </div>
             <p>Terima Kasih.</p>
         </main>
+        
         <div class="sudut">
             <img src="./img/Social Media Image Portfolio/Arrow Right.png">
             <img src="./img/Social Media Image Portfolio/Arrow Right.png">
@@ -196,17 +205,42 @@
         </div>
     </section>
 
-    <section class="latest-project" id="project">
-        <h2>Latest Project</h2>
+
+    <section  class="w-full h-max relative flex flex-col text-center items-center justify-center text-white" id="achievement">
+        <section class="bar hidden"></section>
+        <section class="bar"></section>
+        <h2 class="text-white text-xl mt-5">My Achievement</h2>
+        <div class="w-full max-h-96 text-center mt-5 mb-5 flex flex-wrap gap-10 justify-center items-center overflow-hidden overflow-y-scroll" id="achievement-wrapper">
+            
+        </div>
+        <!-- <p class="text-white">Scroll Image (Horizontal)</p> -->
     </section>
 
-    <section class="gallery-project">
+    <section class="latest-project" id="project">
+        <h2>Latest Project</h2>
+        
+    </section>
+
+    <section class="gallery-project h-max">
         <section class="bar"></section>
         <h2>Gallery Project</h2>
         <p>Scroll Image (Horizontal)</p>
-        <main class="gallery-project-inside">
-        </main>
+        <main class="gallery-project-inside flex  justify-center">
+            <!-- kumpulan project 3 ke bawah -->
+            <div class="min-w-80 max-h-96 overflow-hidden overflow-y-scroll flex flex-col gap-5 items-center scroll-horizontal">
+                <!-- <a  href="${value.demoUrl}" class="rounded-lg"><img class="max-w-64 h-64 shadow-md shadow-white object-cover" src="${value.imagePath}"></a> -->
+            </div>
+            
+        <div class="hidden latest w-5/6">
+       
+        </div>
 
+        
+    </main>
+    
+    <div class="hidden h-max w-full flex justify-center" id="hide-me">
+       <!-- <a class="w-full" href="${obj.demoUrl}"><img class="w-full" src="${obj.imagePath}"></a> -->
+    </div>
     </section>
 
 
