@@ -3,7 +3,7 @@
 const projectWildan = [
     {
         namaApplication : 'Resturant - Cashier Side',
-        bodyCopy : 'Restaurant - Cashier Side Simulator (User : "admin", Password : "Admin")',
+        bodyCopy : 'Restaurant - Cashier Side Simulator (User : "admin", Password : "admin") - Desktop',
         imagePath : './img/project/restaurant_cashierside_php.png',
         demoUrl : 'http://cashier.infinityfreeapp.com/wildanResto/',
         canDemo : true
@@ -105,7 +105,7 @@ latestProject.innerHTML +=
             <img class="h-52 w-80 rounded-xl" src=${value.imagePath}>
             <h2 class="max-w-72">${value.namaApplication}</h2>
             <p class="max-w-72">${value.bodyCopy}</p>
-            <a class="w-52 h-" href=${value.demoUrl}><button class="w-full h-8 rounded bg-indigo-500 shadow-lg shadow-indigo-500/50 hover:shadow-blue-500/50">Demo Live</button></a>
+            <a class="w-52" href=${value.demoUrl}><button class="w-full p-2.5 text-xl rounded-lg bg-indigo-500 shadow-lg shadow-indigo-500/50 hover:shadow-blue-500/50">Demo Live</button></a>
         </div>
         `;
     }).join('')}
@@ -144,3 +144,20 @@ function lastestProject_second(element,data){
 listAllProjectExceptLastest(mainGalleryProject,projectWildan);
 lastestProject_first(mainGalleryProject,projectWildan);
 lastestProject_second(mainGalleryProject,projectWildan);
+
+function isMobile() {
+    const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+    return regex.test(navigator.userAgent);
+  }
+  
+  if (isMobile()) {
+    if(achievement_wrapper.children.length == 1){
+        achievement_wrapper.style.justifyContent = "center";
+    }
+} else {
+    console.log("Desktop device detected");
+    achievement_wrapper.style.justifyContent = "center";
+    if(achievement_wrapper.children.length > 3){
+        achievement_wrapper.style.justifyContent = "start";
+    }
+  }

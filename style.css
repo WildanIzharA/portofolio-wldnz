@@ -864,8 +864,10 @@ main > .second > a >  img{
         flex-direction: row !important;
         max-width: 95%;
         overflow: hidden;
-        overflow-x: scroll;
+        overflow-x: scroll !important;
     }
+
+    
 
 }
 

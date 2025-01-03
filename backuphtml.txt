@@ -41,3 +41,6 @@
          <div class="second">
              <a href="#"><img src="./img/project/portofolio.png"></a>
          </div>
+
+
+tailwind watch command line => npx tailwindcss -i ./src/input.css -o ./dist/ouput.css
