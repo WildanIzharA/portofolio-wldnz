@@ -4,5 +4,5 @@ mungkin kedepannya saya akan menggunakan api untuk mengakses project project say
 dan untuk saat ini masih menggunakan array terlebih dahulu ya haha!..
 kedepannya bakal di update portofolionya semoga aja.
 Jadi stay tune ya!.
-
+test
 updated => adding achievement page, remove contact from navigation, using tailwind for few element - wldnz (01/01/2024);
